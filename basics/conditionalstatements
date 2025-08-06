@@ -1,0 +1,320 @@
+//MY INSTA LIFE
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        String name;
+        long follow;
+        long post;
+        float hours;
+        Scanner scan = new Scanner(System.in);
+        name=scan.nextLine().trim();
+        follow=scan.nextLong();
+        post=scan.nextLong();
+        hours=scan.nextFloat();
+            System.out.println("My name is "+ name+", my Instagram has "+ follow+" followers, I have posted " + post +" posts, and I use Instagram for "+ hours +" hours daily.");
+    }
+}
+
+//Smart Shopper 1
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scan=new Scanner (System.in);
+        int cost1=scan.nextInt();
+        int quan1=scan.nextInt();
+        int cost2=scan.nextInt();
+        int quan2=scan.nextInt();
+        int cost3=scan.nextInt();
+        int quan3=scan.nextInt();
+        int budget=scan.nextInt();
+        double totalbeforetax=cost1*quan1+cost2*quan2+cost3*quan3;
+        double totalaftertax=totalbeforetax*1.10;
+        System.out.printf("Total (Before Tax): %.2f\n",totalbeforetax);
+        System.out.printf("Total (After Tax): %.2f\n",totalaftertax);
+        if (totalaftertax <= budget) {
+            System.out.println("Within Budget");
+        }
+        else
+            System.out.println("Over Budget");
+    
+    }
+}
+
+//ATM withdrawal Logic
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int amount=scan.nextInt();
+        scan.nextLine();
+        String notestatus=scan.nextLine();
+        if(notestatus.equals("available") && amount%100==0)
+            System.out.println("Amount "+ amount+" can be withdrawn");
+        else if( notestatus.equals("not available") && amount%500==0)
+            System.out.println("Amount "+ amount+" can be withdrawn");
+        else
+            System.out.println("Enter amount in multiples of 500");
+        
+    }
+}
+
+//Team Formation
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int players = scan.nextInt();
+        int perteam = scan.nextInt();
+        int totalteam= players/perteam;
+        int playersleft= players%perteam;
+        System.out.println("Total teams formed: "+ totalteam);
+        System.out.println("Players left out: "+ playersleft);
+    }
+}
+
+//Eligibility check for Marathon
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int age = scan.nextInt();
+        int fitness=scan.nextInt();
+        if(age>=18 && fitness>=60)
+            System.out.println("Eligible for marathon");
+        else
+            System.out.println("Not eligible for marathon");
+    }
+}
+
+//Greatest of TWo numbers
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int a = scan.nextInt();
+        int b = scan.nextInt();
+        if(a>b){
+            System.out.println(a +" is greater");
+        }
+        else if(b>a) 
+        {
+            System.out.println(b +" is greater");
+        }
+        else
+        {
+            System.out.println("Both are equal");
+        }
+    }
+}
+
+//Greatest of 3 numbers
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner (System.in);
+        int a = scan.nextInt();
+        int b = scan.nextInt();
+        int c = scan.nextInt();
+        if(a>b){
+            if(a>c){
+                System.out.println(a+ " is the greatest");
+            }
+            else {
+                System.out.println(c+ " is the greatest");
+            }
+        }
+        else
+        {
+            if(a==b || b==c)
+            {
+                System.out.println("There is a tie for the greatest number");
+            }
+            else {
+                System.out.println(c+ " is the greatest");
+            }
+        }
+    }
+}
+//character Classifier
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        char ch = scan.next().charAt(0);
+       if (ch>='A' && ch<='Z')
+          System.out.println("Uppercase Alphabet");
+       else if(ch>='a' && ch<='z')
+          System.out.println("Lowercase Alphabet");
+       else if(ch>='0' && ch<='9')
+            System.out.println("Digit");
+       else
+            System.out.println("Special Character");
+    
+    }
+}
+
+//Triangle type detector
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scan= new Scanner(System.in);
+        int a=scan.nextInt();
+        int b=scan.nextInt();
+        int c=scan.nextInt();
+        if(a + b > c && a + c > b && b + c > a){ 
+            
+        if(a == b && b == c ){
+            System.out.println("Equilateral Triangle");}
+        else if(a == b || b == c || a == c){
+            System.out.println("Isoceles Triangle");}
+        else {
+            System.out.println("Scalene Triangle");}
+        }
+        else{
+            System.out.println("Not a valid triangle");}
+    }
+}
+
+//Leapyear Checker
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+       Scanner scan = new Scanner(System.in);
+        int year=scan.nextInt();
+        if(year%400==0)
+            System.out.println("Leap Year");
+        else if(year%100!=0 && year%4 ==0)
+            System.out.println("Leap Year");
+        else
+            System.out.println("Not a Leap Year");
+    }
+}
+
+//Number sign Identifier
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
+        if(n>0)
+            System.out.println("Positive");
+        else if(n<0)
+            System.out.println("Negative");
+        else
+            System.out.println("Zero");
+    }
+}
+
+//Student Grade Evaluator
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scan =new Scanner(System.in);
+        int mark=scan.nextInt();
+        if(mark<=100 && mark>=90)
+            System.out.println("Grade A");
+        else if(mark<90 && mark>=80)
+            System.out.println("Grade B");
+        else if(mark<80 && mark>=70)
+            System.out.println("Grade C");
+        else if(mark<70 && mark>=60)
+            System.out.println("Grade D");
+        else if(mark<60 && mark>=50)
+            System.out.println("Grade E");
+        else
+            System.out.println("Fail");
+        
+        
+    }
+}
+
+//cars and Mouse
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    // Complete the catAndMouse function below.
+    static String catAndMouse(int x, int y, int z) {
+        int distanceCatA = Math.abs(x - z);
+        int distanceCatB = Math.abs(y - z);
+
+        if (distanceCatA < distanceCatB) {
+            return "Cat A";
+        } else if (distanceCatB < distanceCatA) {
+            return "Cat B";
+        } else {
+            return "Mouse C";
+        }
+    }
+
+    public static void main(String[] args) throws IOException {
+        Scanner scanner = new Scanner(System.in);
+
+        BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
+
+        int q = scanner.nextInt();
+        scanner.nextLine(); 
+
+        for (int qItr = 0; qItr < q; qItr++) {
+            String[] xyz = scanner.nextLine().split(" ");
+
+            int x = Integer.parseInt(xyz[0]);
+            int y = Integer.parseInt(xyz[1]);
+            int z = Integer.parseInt(xyz[2]);
+
+            String result = catAndMouse(x, y, z);
+
+            bufferedWriter.write(result);
+            bufferedWriter.newLine();
+        }
+
+        bufferedWriter.close();
+        scanner.close();
+    }
+}
+
