@@ -1,0 +1,18 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        String name;
+        long follow;
+        long post;
+        float hours;
+        Scanner scan = new Scanner(System.in);
+        name=scan.nextLine().trim();
+        follow=scan.nextLong();
+        post=scan.nextLong();
+        hours=scan.nextFloat();
+            System.out.println("My name is "+ name+", my Instagram has "+ follow+" followers, I have posted " + post +" posts, and I use Instagram for "+ hours +" hours daily.");
+    }
+}
