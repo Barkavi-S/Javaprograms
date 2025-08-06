@@ -1,0 +1,545 @@
+//Print in order and reverse
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+         Scanner scan=new Scanner(System.in);
+         int N=scan.nextInt();
+        
+        for( int i=1;i<=N;i++) {
+            System.out.print(i+" ") ;
+           
+        }
+        for(int i=N;i>=1;i--){
+            System.out.print(i+" ");
+        }
+        
+        
+    }
+}
+
+//Even or odd detector
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scan=new Scanner(System.in);
+        int n=scan.nextInt();
+        if(n%2==0)
+            System.out.println("Even");
+        else
+            System.out.println("Odd");
+    }
+}
+
+//Print all factors
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scan=new Scanner(System.in);
+        int n=scan.nextInt();
+        for(int i=1;i<=n;i++)
+            if(n%i==0)
+        {
+           System.out.print(i +" ");
+            
+        }
+    }
+}
+
+//count of factors
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scan=new Scanner(System.in);
+        int n=scan.nextInt();
+        int count=0;
+        for(int i=1;i<=n;i++)
+            if(n%i==0){
+                count++;
+            }
+        System.out.print(count);
+    }
+}
+
+//Is it a Prime Number
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scan=new Scanner(System.in);
+        int n=scan.nextInt();
+        int count=0;
+        for(int i=1;i<=n;i++){
+            if(n%i==0){
+                count++;}}
+                if(count==2)
+                System.out.print("Prime");  
+             else
+                System.out.println("Not Prime");
+      }
+    }
+
+//Sum and factorial combo
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scan=new Scanner(System.in);
+        int n=scan.nextInt();
+        int sum=0;
+        int fact=1;
+        for(int i=1;i<=n;i++)
+        {
+            sum=sum+i;
+            fact=fact*i;
+        }
+            System.out.println(sum);
+            System.out.println(fact);
+    }
+}
+
+//Perfect number checker
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
+
+        int sum = 0;
+        for (int i = 1; i < n; i++) { 
+            if (n % i == 0) {
+                sum += i;
+            }
+        }
+
+        if (sum == n) {
+            System.out.println("Perfect Number");
+        } else {
+            System.out.println("Not a Perfect Number");
+        }
+    }
+}
+
+//Spy Numberchecker
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scan=new Scanner(System.in);
+        int n=scan.nextInt();
+        int sum=0;
+        int product=1;
+        int temp=n;
+         while(temp>0){
+            int digit=temp%10;
+            sum=sum+digit;
+            product=product*digit;
+            temp=temp/10;
+        }
+        if(sum==product){
+            System.out.println("Spy Number");
+        }else{
+        
+            System.out.println("Not a Spy Number");
+        }
+        
+        
+    }
+}
+
+//Multiplication Table Generator
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scan=new Scanner(System.in);
+        int n=scan.nextInt();
+        int result=1;
+        for(int i=1;i<=10;i++)
+        {
+            result=n*i;
+            System.out.println(n+" * " +i+" = "+result);
+        }
+    }
+}
+
+//Manual power Calculator
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scan=new Scanner(System.in);
+        int base=scan.nextInt();
+        int exp=scan.nextInt();
+        int res=1;
+        for(int i=1;i<=exp;i++){
+            res=res*base ;       }
+        System.out.println(res);
+    }
+}
+
+//Prime numbers in Range
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int start = scanner.nextInt();
+        int end = scanner.nextInt();
+        boolean found = false;
+
+        for (int num = start; num <= end; num++) {
+            if (isPrime(num)) {
+                System.out.print(num + " ");
+                found = true;
+            }
+        }
+
+        if (!found) {
+            System.out.println("No prime numbers");
+        }
+    }
+
+    // Helper method to check if a number is prime
+    private static boolean isPrime(int num) {
+        if (num < 2) return false;
+        for (int i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0)
+                return false;
+        }
+        return true;
+    }
+}
+
+//Digit Counter
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scan = new Scanner(System.in);
+        int N=scan.nextInt();
+        int count=0;
+        if(N==0)
+        {
+            System.out.println("1");
+        }
+        else{
+        while(N!=0)
+        {
+            count++;
+            N=N/10;
+        
+        }
+          System.out.println(count);
+        }
+    }
+}
+
+//Sum of Digits
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scan=new Scanner (System.in);
+        int n=scan.nextInt();
+        int sum=0;
+        if(n<0){
+            n=n*(-1);
+            //System.out.println(n);
+        }
+        while(n>0){
+            int digit = n%10;
+            sum+=digit;
+            n/=10;
+        }System.out.println(sum);
+    }
+}
+
+//Sum of Odd and even digits
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scan=new Scanner(System.in);
+        int N=scan.nextInt();
+        int evensum=0;
+        int oddsum=0;
+        if(N<0)
+        {
+            N=N*(-1);
+        }
+        while(N>0){
+            int digit=N%10;
+            if(digit%2==0){
+                evensum+=digit;
+            }
+            else{
+                oddsum+=digit;
+            }
+            N=N/10;
+            
+        }
+          System.out.println(oddsum+" "+evensum)  ;
+            
+    }
+}
+
+//Maximum and MinimunDigit
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scan=new Scanner(System.in);
+        int n=scan.nextInt();
+        n=Math.abs(n);
+        int maxdigit=0;
+        int mindigit=9;
+        if(n==0){
+            maxdigit=mindigit=0;
+        }
+        while(n>0){
+            int digit=n%10;
+            if(digit>maxdigit) maxdigit=digit;
+            if(digit<mindigit)mindigit=digit;
+            n=n/10;
+        }
+        System.out.print(maxdigit+" "+mindigit);
+    }
+}
+
+//Sum of First and LastDigit
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scan=new Scanner(System.in);
+        int n=scan.nextInt();
+        n=Math.abs(n);
+        String numberStr=String.valueOf(n);
+        int firstdigit=Character.getNumericValue(numberStr.charAt(0));
+        int lastdigit=Character.getNumericValue(numberStr.charAt(numberStr.length()-1));
+        int sum=firstdigit+lastdigit;
+        System.out.println(sum);
+    }
+}
+
+//Reverse the Number
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scan=new Scanner(System.in);
+        int n=scan.nextInt();
+        int rev=0;
+        while(n!=0){
+            rev=rev*10+(n%10);
+            n=n/10;
+        }
+        System.out.print(rev);
+    
+    }
+}
+
+//Palindrome Number
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int r=0;
+        int temp=n;
+        if(n<0){
+            System.out.print("false");
+        }
+        else{
+        while(n!=0){
+            r=(r*10)+(n%10);
+            n/=10;
+        }
+        
+        if(r==temp)
+            System.out.print("true");
+        else
+            System.out.print("false");
+
+        }
+    }
+    
+}
+
+//Armstrong number
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+public static int count(int n)
+  {
+    int c = 0;
+    while(n!=0) {
+      c++;
+      n/=10;
+    }
+    return c;
+}
+    public static int sum(int n,int c){
+        int sum=0;
+        while(n!=0){
+            sum+=Math.pow(n%10,c);
+            n=n/10;
+        }
+        return sum;
+    }
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scan=new Scanner(System.in);
+        int n=scan.nextInt();
+        int c=count(n);
+        int s=sum(n,c);
+        if(s==n){
+            System.out.println("true");}
+        else{
+            System.out.println("false");}
+        
+    }
+}
+
+//Neon number
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scan=new Scanner(System.in);
+        int n=scan.nextInt();
+        int square=n*n;
+        int sum=0;
+        int rem=0;
+        while(square!=0){
+            rem=square%10;
+            sum=sum+rem;
+            square/=10;
+        }
+        if(sum==n)
+            System.out.println("true");
+        else
+            System.out.println("false");
+    }
+}
+
+//Automorphic number
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scan=new Scanner(System.in);
+        int n=scan.nextInt();
+        int square=n*n;
+        int numDigit=(int)Math.log10(n)+1;
+        int result=(int)Math.pow(10,numDigit);
+        if(square%result==n)
+            System.out.println("Automorphic");
+        else
+            System.out.println("Not Automorphic");
+    }
+}
+
+//Harshad Number
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scan=new Scanner(System.in);
+        int n=scan.nextInt();
+        int res=0;
+        int original=n;
+        while(n>0){
+            res+=n%10;
+            n=n/10;
+        }
+        if(original%res==0)
+            System.out.println("Harshad Number");
+        else
+            System.out.println("Not Harshad Number");
+    }
+}
+
+//Buzz Number
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scan=new Scanner(System.in);
+        int n=scan.nextInt();
+        if(n%10==7 || n%7==0){
+            System.out.println("Buzz Number");}
+        else{
+            System.out.println("Not Buzz Number");
+        }
+    }
+}
