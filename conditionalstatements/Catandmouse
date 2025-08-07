@@ -1,0 +1,50 @@
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    // Complete the catAndMouse function below.
+    static String catAndMouse(int x, int y, int z) {
+        int distanceCatA = Math.abs(x - z);
+        int distanceCatB = Math.abs(y - z);
+
+        if (distanceCatA < distanceCatB) {
+            return "Cat A";
+        } else if (distanceCatB < distanceCatA) {
+            return "Cat B";
+        } else {
+            return "Mouse C";
+        }
+    }
+
+    public static void main(String[] args) throws IOException {
+        Scanner scanner = new Scanner(System.in);
+
+        BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
+
+        int q = scanner.nextInt();
+        scanner.nextLine(); 
+
+        for (int qItr = 0; qItr < q; qItr++) {
+            String[] xyz = scanner.nextLine().split(" ");
+
+            int x = Integer.parseInt(xyz[0]);
+            int y = Integer.parseInt(xyz[1]);
+            int z = Integer.parseInt(xyz[2]);
+
+            String result = catAndMouse(x, y, z);
+
+            bufferedWriter.write(result);
+            bufferedWriter.newLine();
+        }
+
+        bufferedWriter.close();
+        scanner.close();
+    }
+}
+
