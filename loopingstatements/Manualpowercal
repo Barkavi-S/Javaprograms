@@ -1,0 +1,16 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scan=new Scanner(System.in);
+        int base=scan.nextInt();
+        int exp=scan.nextInt();
+        int res=1;
+        for(int i=1;i<=exp;i++){
+            res=res*base ;       }
+        System.out.println(res);
+    }
+}
