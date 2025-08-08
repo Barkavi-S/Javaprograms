@@ -1,0 +1,15 @@
+import java.util.*;
+public class Bigsum{
+    public static void main(String... args){
+        Scanner scan=new Scanner(System.in);
+        int n=scan.nextInt();
+        int arr[]=new int[n];
+        long sum=0;
+        for(int i=0;i<n;i++){
+            arr[i]=scan.nextInt();
+            sum=sum+arr[i];
+         //System.out.print(sum);
+    }System.out.print(sum);
+    }
+
+}
